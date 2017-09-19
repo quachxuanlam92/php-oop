@@ -1,21 +1,4 @@
-<?php
-// including the database connection file
-include_once("classes/Crud.php");
- 
-$crud = new Crud();
- 
-//getting id from url
-$id = $crud->escape_string($_GET['id']);
- 
-//selecting data associated with this particular id
-$result = $crud->getData("SELECT * FROM users WHERE id=$id");
- 
-foreach ($result as $res) {
-    $name = $res['name'];
-    $age = $res['age'];
-    $email = $res['email'];
-}
-?>
+
 <html>
 <head>    
     <title>Edit Data</title>
